@@ -46,6 +46,18 @@ Today, I focused on the foundational concepts of Java. Below is a summary of the
     - **Testing:** Creating and running tests to verify functionality.
     - **Debugging:** Identifying and fixing issues in the code.
 
-### **Code Examples and Exercises:**
 
-- The `src` folder contains sample code demonstrating the above concepts.
+### **Project: CreditCard Program**
+
+In addition to learning the above concepts, I also created a simple `CreditCard` program that demonstrates the use of classes, encapsulation, and basic operations. Here's a brief summary of what the program does:
+
+- **Customer Information**: Stores the customer's name, bank name, account number, credit limit, and balance.
+- **Operations**:
+   - `charge(int price)`: Charges a specified amount to the credit card if it doesn't exceed the limit.
+   - `makePayment(double amount)`: Makes a payment to reduce the balance.
+- **Utility Method**:
+   - `printSummary(CreditCard card)`: Prints the credit card details including customer name, bank name, account number, balance, and limit.
+
+### **Next Steps:**
+
+I will continue to build on these concepts and apply them in upcoming projects. Stay tuned for updates as I dive deeper into Java and Spring Boot!
