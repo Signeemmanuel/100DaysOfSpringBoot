@@ -61,3 +61,40 @@ In addition to learning the above concepts, I also created a simple `CreditCard`
 ### **Next Steps:**
 
 I will continue to build on these concepts and apply them in upcoming projects. Stay tuned for updates as I dive deeper into Java and Spring Boot!
+
+
+---
+
+## Day 2: Object Oriented Design
+
+### **Learnings:**
+
+Today, I focused on Object Oriented Design principles in Java. Below is a summary of the key topics covered:
+
+1. **Inheritance:**
+    - Understanding how to derive new classes from existing ones.
+    - Implementing the `extends` keyword to achieve class hierarchy and reuse code.
+
+2. **Interfaces and Abstract Classes:**
+    - Defining and using interfaces to establish contracts for classes.
+    - Creating abstract classes that provide a base for other classes to extend.
+
+3. **Exceptions:**
+    - Handling runtime errors using `try`, `catch`, `finally` blocks.
+    - Creating custom exceptions by extending the `Exception` class.
+    - Using `throws` and `throw` keywords.
+
+4. **Casting and Generics:**
+    - Performing type casting to convert one type into another.
+    - Utilizing generics to write flexible and reusable code.
+    - Implementing generic classes and methods.
+
+5. **Nested Classes:**
+    - Creating inner classes and understanding their use cases.
+    - Differentiating between static and non-static nested classes.
+    - Implementing anonymous and local classes.
+
+
+### **Next Steps:**
+
+I will continue to build on these concepts and apply them in upcoming projects. Stay tuned for updates as I dive deeper into Java and Spring Boot!
