@@ -98,3 +98,28 @@ Today, I focused on Object Oriented Design principles in Java. Below is a summar
 ### **Next Steps:**
 
 I will continue to build on these concepts and apply them in upcoming projects. Stay tuned for updates as I dive deeper into Java and Spring Boot!
+
+
+----
+
+## Day 3: Java File Handling, Lambda, and Collections
+
+### Topics Covered:
+- Java File Handling
+- Java Lambda Expressions
+- Java ArrayList
+- Java LinkedList
+- Java Date
+- Java List Sorting
+- Java HashMap
+- Java HashSet
+
+### Project 1: Character Frequency Analyzer
+
+#### Description
+A Java program that inputs a document and then outputs a bar-chart plot of the frequencies of each alphabet character that appears within that document.
+
+### Project 2: River Ecosystem
+
+#### Description
+   A Java program to simulate an ecosystem containing bears and fish in a river. The river is modeled as a large array. Each cell can hold a Bear object, a Fish object, or be empty. Animals move based on a random process and interact in specific ways when they collide.
