@@ -17,16 +17,16 @@ public abstract class Animal {
 
     protected int strength;
 
-    public Animal(Type type, int currentPosition, int strength, Gender gender) {
+    protected int currentTime;
+
+    public Animal(Type type, int currentPosition, int strength, Gender gender, int currentTime) {
         this.type = type;
         this.currentPosition = currentPosition;
         this.strength = strength;
         this.gender = gender;
+        this.currentTime = currentTime;
     }
 
-//    Animal(Type type) {
-//        this.type = type;
-//    }
 
     public Type getType() {
         return type;
@@ -41,6 +41,6 @@ public abstract class Animal {
                 '}';
     }
 
-    public abstract void move(Animal[] river);
+    public abstract void move(Animal[] river, int time);
 
 }

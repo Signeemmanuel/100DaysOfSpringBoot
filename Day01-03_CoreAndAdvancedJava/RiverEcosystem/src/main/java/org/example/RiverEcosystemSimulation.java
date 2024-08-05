@@ -8,10 +8,6 @@ public class RiverEcosystemSimulation {
         int riverSize = 14;
         Animal[] river = new Animal[riverSize];
 
-//        System.out.println("\n\n\tRIVER ECOSYSTEM");
-//        System.out.println("\nThe Ecosystem consist of a River, Bears, and Fishes");
-//        System.out.println("The River is an Array of animals");
-//        System.out.println("\tB = Bear, \n\tF = Fish");
         System.out.println("""
                 \nRIVER ECOSYSTEM
                 
@@ -36,10 +32,10 @@ public class RiverEcosystemSimulation {
 
         initializeRiver(river);
 
-        for (int i = 0; i < 20; i++) {
+        for (int time = 1; time < 20; time++) {
             if (isRiverFull(river)) break;
-            simulateStep(river);
-            System.out.print("time " + i + "\t");
+            simulateStep(river, time);
+            System.out.print("time " + time + "\t");
             printRiver(river);
         }
     }
@@ -49,24 +45,25 @@ public class RiverEcosystemSimulation {
         for (int i = 0; i < river.length; i++) {
             int randNum = rand.nextInt(10);
             Animal.Gender gender = rand.nextInt(2) == 0 ? Animal.Gender.M : Animal.Gender.F;
+            int zeroTime = 0;
             int strength;
 
             if (randNum == 0) {
-                strength = 100 + rand.nextInt(20);
-                river[i] = new Bear(i, strength, gender);
+                strength = 900 + rand.nextInt(100);
+                river[i] = new Bear(i, strength, gender, zeroTime);
             } else if (randNum == 1) {
-                strength = 10 + rand.nextInt(20);
-                river[i] = new Fish(i, strength, gender);
+                strength = 10 + rand.nextInt(100);
+                river[i] = new Fish(i, strength, gender, zeroTime);
             } else {
                 river[i] = null;
             }
         }
     }
 
-    private static void simulateStep(Animal[] river) {
+    private static void simulateStep(Animal[] river, int time) {
         for (int i = 0; i < river.length; i++) {
             if (river[i] != null) {
-                river[i].move(river);
+                river[i].move(river, time);
                 if (isRiverFull(river)) break;
             }
         }

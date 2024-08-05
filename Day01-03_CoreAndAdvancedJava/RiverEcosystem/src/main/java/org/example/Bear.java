@@ -15,20 +15,23 @@ public class Bear extends Animal {
         return "Bear-" + strength + "-" +  gender;
     }
 
-    public Bear(int currentPosition, int strength , Gender gender) {
-        super(Type.BEAR, currentPosition, strength ,gender);
+    public Bear(int currentPosition, int strength , Gender gender, int currentTime) {
+        super(Type.BEAR, currentPosition, strength ,gender, currentTime);
     }
 
 
 
     @Override
-    public void move(Animal[] river) {
+    public void move(Animal[] river, int time) {
 
         Random rand = new Random();
         int direction = rand.nextInt(3) - 1;    // -1, 0, or 1
         int nextPosition = currentPosition + direction;
 
-        if (direction != 0 && nextPosition < river.length && nextPosition >= 0) {
+        if (currentTime < time && direction != 0 && nextPosition < river.length && nextPosition >= 0) {
+//
+            ++currentTime;
+//            System.out.print(currentTime + " " + time);
             switch (river[nextPosition]) {
                 case null -> {
                     river[nextPosition] = this;
@@ -41,7 +44,7 @@ public class Bear extends Animal {
                 }
                 case Bear bear -> {
                     if (this.gender != river[nextPosition].gender) {
-                        createNewBear(river);
+                        createNewBear(river, time);
                     } else {
                         if (this.strength > river[nextPosition].strength) {
                             river[currentPosition] = null;
@@ -59,17 +62,17 @@ public class Bear extends Animal {
         }
     }
 
-    private void createNewBear(Animal[] river) {
+    private void createNewBear(Animal[] river, int time) {
         Random rand = new Random();
         int newPosition;
         do {
             newPosition = rand.nextInt(river.length);
         } while (river[newPosition] != null);
 
-        int strength = 100 + rand.nextInt(20);
+        int strength = 900 + rand.nextInt(100);
         Gender gender = rand.nextInt(2) == 0 ? Gender.M : Gender.F;
 
 
-        river[newPosition] = new Bear(newPosition, strength, gender);
+        river[newPosition] = new Bear(newPosition, strength, gender, time);
     }
 }

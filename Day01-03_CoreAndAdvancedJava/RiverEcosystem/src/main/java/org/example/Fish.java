@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Fish extends Animal{
 
-    Fish(int currentPosition, int strength, Gender gender) {
-        super(Type.FISH, currentPosition, strength, gender);
+    Fish(int currentPosition, int strength, Gender gender, int currentTime) {
+        super(Type.FISH, currentPosition, strength, gender, currentTime);
     }
 
     @Override
@@ -14,13 +14,14 @@ public class Fish extends Animal{
     }
 
     @Override
-    public void move(Animal[] river) {
+    public void move(Animal[] river, int time) {
 
         Random rand = new Random();
         int direction = rand.nextInt(3) - 1;    // -1, 0, or 1
         int nextPosition = currentPosition + direction;
 
-        if (direction != 0 && nextPosition < river.length && nextPosition >= 0) {
+        if (currentTime < time && direction != 0 && nextPosition < river.length && nextPosition >= 0) {
+            ++currentTime;
             switch (river[nextPosition]) {
                 case null -> {
                     river[nextPosition] = this;
@@ -30,7 +31,7 @@ public class Fish extends Animal{
                 case Bear bear -> river[currentPosition] = null;
                 case Fish fish -> {
                     if (this.gender != fish.gender) {
-                        createNewFish(river);
+                        createNewFish(river, time);
                     } else {
                         if (this.strength > fish.strength) {
                             river[nextPosition] = this;
@@ -47,16 +48,16 @@ public class Fish extends Animal{
         }
     }
 
-    private void createNewFish(Animal[] river) {
+    private void createNewFish(Animal[] river, int time) {
         Random rand = new Random();
         int newPosition;
         do {
             newPosition = rand.nextInt(river.length);
         } while (river[newPosition] != null);
 
-        int strength = 10 + rand.nextInt(20);
+        int strength = 10 + rand.nextInt(90);
         Gender gender = rand.nextInt(2) == 0 ? Gender.M : Gender.F;
 
-        river[newPosition] = new Fish(currentPosition, strength, gender);
+        river[newPosition] = new Fish(currentPosition, strength, gender, time);
     }
 }
