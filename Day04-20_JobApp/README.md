@@ -67,3 +67,30 @@ Developing Job App, focusing on setting up the service layer and implementing ba
 CRUD operations. Also integrated JPA for database interactions and configured the H2 
 in-memory database for testing purposes. The application was extended to include 
 managing companies and reviews, showcasing relationships and additional CRUD operations.
+
+
+
+---
+
+
+## Progress for Day 6
+
+Today, I made significant progress on the job application project by implementing 
+monitoring and containerization features using Spring Boot Actuator and Docker.
+
+### Spring Boot Actuator
+- **Introduction to Spring Boot Actuator**: Set up Actuator in the Spring Boot application.
+- **Endpoints Enabled**:
+    - `/health`: Monitors the health of the application.
+    - `/info`: Displays application information.
+    - `/metrics`: Provides various metrics related to the application.
+    - `/loggers`: Manages application log levels dynamically.
+    - `/beans`: Lists all the beans in the application context.
+    - `/shutdown`: Gracefully shuts down the application.
+
+### Docker with Spring Boot
+- **Introduction to Docker**: Reviewed Docker architecture and concepts.
+- **Installation**: Installed Docker on Windows and Mac.
+- **Containerizing Spring Boot Application**: Successfully containerized the job app.
+- **Docker Commands**: Practiced essential Docker commands.
+- **Testing**: Tested the Spring Boot application running inside a Docker container.
