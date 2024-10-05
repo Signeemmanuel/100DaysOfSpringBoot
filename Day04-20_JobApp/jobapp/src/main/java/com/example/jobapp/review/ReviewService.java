@@ -1,13 +1,11 @@
 package com.example.jobapp.review;
 
-
 import java.util.List;
 
 public interface ReviewService {
     List<Review> getAllReviews(Long companyId);
-    boolean addReview(Review review, Long companyId);
-    Review getReview(Long companyId, Long reviewId);
-
-    boolean updateReview(Review updateReview, Long companyId, Long reviewId);
-    boolean deleteReview(Long companyId, Long reviewId);
+    Boolean addReview(Long companyId, Review review);
+    Review getReviewById(Long companyId, Long reviewId);
+    Boolean updateReview(Long companyId, Long reviewId, Review updatedReview);
+    Boolean deleteReview(Long companyId, Long reviewId);
 }

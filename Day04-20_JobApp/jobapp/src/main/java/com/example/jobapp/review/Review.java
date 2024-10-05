@@ -1,20 +1,17 @@
 package com.example.jobapp.review;
 
 import com.example.jobapp.company.Company;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
-@Table
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
-    private String rating;
+    private double rating;
 
-    @JsonIgnore
     @ManyToOne
     private Company company;
 
@@ -45,11 +42,11 @@ public class Review {
         this.description = description;
     }
 
-    public String getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 

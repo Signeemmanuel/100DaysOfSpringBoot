@@ -1,12 +1,10 @@
 package com.example.jobapp.job;
 
-
 import com.example.jobapp.company.Company;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+//@Table(name='job_table')
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,15 +19,6 @@ public class Job {
     private Company company;
 
     public Job() {
-    }
-
-    public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.minSalary = minSalary;
-        this.maxSalary = maxSalary;
-        this.location = location;
     }
 
     public Long getId() {
@@ -87,5 +76,4 @@ public class Job {
     public void setCompany(Company company) {
         this.company = company;
     }
-
 }

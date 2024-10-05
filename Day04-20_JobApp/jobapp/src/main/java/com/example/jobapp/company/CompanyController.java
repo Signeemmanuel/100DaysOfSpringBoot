@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/companies")
 public class CompanyController {
-    CompanyService companyService;
+    private final CompanyService companyService;
 
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
@@ -17,29 +17,27 @@ public class CompanyController {
 
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies() {
-        List<Company> companies = companyService.getAllCompanies();
-        return new ResponseEntity<>(companies, HttpStatus.OK);
+        return ResponseEntity.ok(companyService.getAllCompanies());
     }
 
     @PostMapping
     public ResponseEntity<String> createCompany(@RequestBody Company company) {
         companyService.createCompany(company);
-        return new ResponseEntity<>("Company added Successfully", HttpStatus.CREATED);
+        return ResponseEntity.ok("Company added successfully");
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Company> getCompany(@PathVariable Long id) {
-        Company company = companyService.getCompany(id);
+    public ResponseEntity<Company> getCompanyById(@PathVariable Long id) {
+        Company company = companyService.getCompanyById(id);
         if (company != null) {
-            return ResponseEntity.ok(company);
+            return new ResponseEntity<>(company, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<String> updateCompany(@PathVariable Long id, @RequestBody Company company) {
-        boolean updated = companyService.updateCompany(company, id);
-
+    public ResponseEntity<String> updateCompany(@PathVariable Long id, @RequestBody Company updatedCompany) {
+        boolean updated = companyService.updateCompany(id, updatedCompany);
         if (updated) {
             return new ResponseEntity<>("Company updated successfully", HttpStatus.OK);
         }

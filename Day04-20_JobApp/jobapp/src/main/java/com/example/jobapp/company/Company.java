@@ -8,9 +8,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table
 public class Company {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,9 +19,9 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "company")
-    List<Review> reviews;
+    private List<Review> reviews;
 
     public Company() {
     }
@@ -59,13 +57,4 @@ public class Company {
     public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
     }
-
-    public List<Review> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
 }
