@@ -94,3 +94,33 @@ monitoring and containerization features using Spring Boot Actuator and Docker.
 - **Containerizing Spring Boot Application**: Successfully containerized the job app.
 - **Docker Commands**: Practiced essential Docker commands.
 - **Testing**: Tested the Spring Boot application running inside a Docker container.
+
+
+Got it! Here's the updated content reflecting that today is Day 7:
+
+
+---
+
+
+## Day 7: Migrating to PostgreSQL & Microservices
+
+Today, I made significant progress by diving into PostgreSQL and Microservices:
+
+### MIGRATING TO POSTGRESQL
+- Learned the importance of PostgreSQL and why it’s preferred for certain applications.
+- Added necessary dependencies to migrate our Spring Boot app to PostgreSQL.
+- Configured the application to connect with PostgreSQL.
+- Explored Docker Networks and ran PostgreSQL locally using Docker.
+- Set up Docker Compose for multi-container applications.
+- Used PGAdmin to create and manage PostgreSQL databases.
+- Successfully tested the application with PostgreSQL.
+
+### MICROSERVICES ARCHITECTURE:
+- Explored the limitations of monolithic architecture and the benefits of Microservices.
+- Planned the restructuring of the application into microservices for better scalability and maintainability.
+- Created and refactored services:
+  - Job Service
+  - Company Service
+  - Review Service
+- Migrated the services to PostgreSQL and tested the changes using Docker Compose.
+  
