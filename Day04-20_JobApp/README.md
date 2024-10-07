@@ -124,3 +124,29 @@ Today, I made significant progress by diving into PostgreSQL and Microservices:
   - Review Service
 - Migrated the services to PostgreSQL and tested the changes using Docker Compose.
   
+---
+
+# Day 8
+
+### Synchronous Communication: Inter-Service Communication Using RestTemplate
+- Introduction to InterService communication.
+- Why we need **RestTemplate** and how it simplifies communication between services.
+- Communicating between microservices via **RestTemplate**.
+- Implemented the **DTO Pattern** for cleaner data transfers.
+- Tested inter-service communication using **Postman**.
+
+### Service Registry and Inter-Service Communication with Eureka 🛰️
+- Set up **Service Registry** using **Eureka Server**.
+- Registered the **Job Microservice** with Eureka Server.
+- Registered **Company Microservice** and **Reviews Microservice**.
+- Updated the GET request to get a single job and restructured the response with **DTO**.
+- Learned how **Eureka's HeartBeat Mechanism** works behind the scenes.
+
+### Working with OpenFeign 🎛️
+- Introduction to **OpenFeign** and how it simplifies REST clients.
+- Enabled **Feign Clients** for cleaner inter-service communication.
+
+### 📅 Next Steps
+- Further explore inter-service communication strategies.
+- Dive deeper into microservices architecture.
+

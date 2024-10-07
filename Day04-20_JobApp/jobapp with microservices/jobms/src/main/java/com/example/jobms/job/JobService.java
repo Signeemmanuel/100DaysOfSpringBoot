@@ -1,13 +1,15 @@
 package com.example.jobms.job;
 
+import com.example.jobms.job.dto.JobDTO;
+
 import java.util.List;
 
 public interface JobService {
-    List<Job> findAll();
+    List<JobDTO> findAll();
 
     void createJob(Job job);
 
-    Job getJobById(Long id);
+    JobDTO getJobById(Long id);
 
     Boolean deleteJobById(Long id);
 
