@@ -126,7 +126,7 @@ Today, I made significant progress by diving into PostgreSQL and Microservices:
   
 ---
 
-# Day 8
+## Day 8
 
 ### Synchronous Communication: Inter-Service Communication Using RestTemplate
 - Introduction to InterService communication.
@@ -149,4 +149,28 @@ Today, I made significant progress by diving into PostgreSQL and Microservices:
 ### 📅 Next Steps
 - Further explore inter-service communication strategies.
 - Dive deeper into microservices architecture.
+
+---
+
+
+## Day 9
+
+### 1. Distributed Tracing with Zipkin
+- Introduction to Distributed Tracing
+- Zipkin Installation and Setup
+- Integrating Zipkin with Spring Boot Microservices using Micrometer
+- Testing changes and troubleshooting common issues
+
+### 2. Setting Up Config Server
+- Understanding Configuration Management
+- Setting up Spring Cloud Config Server and Client
+- Mapping Config Server to a Git Repository for central configuration management
+
+### 3. API Gateways
+- Overview of API Gateway functions
+- Setting up Spring Cloud Gateway
+- Routing with Eureka Discovery and load balancing using `lb://` URIs
+- API Gateway integration with Eureka Discovery Server
+
+---
 
