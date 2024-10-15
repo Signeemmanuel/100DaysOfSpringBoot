@@ -174,3 +174,16 @@ Today, I made significant progress by diving into PostgreSQL and Microservices:
 
 ---
 
+## Day 10: Fault Tolerance and Circuit Breaking with Resilience4J
+
+**Topics Covered:**
+- Introduction to Fault Tolerance
+- Overview of Resilience4J Modules and Features
+- Circuit Breaking with Resilience4J
+- Integration of Resilience4J with Spring Boot
+- Implemented Circuit Breaking and tested changes
+- Added Fall Back Mechanism for fault tolerance
+- Implemented Retry Mechanism to handle intermittent failures
+- Learned about Rate Limiting and its importance
+- Implemented Rate Limiting with Resilience4J
+
