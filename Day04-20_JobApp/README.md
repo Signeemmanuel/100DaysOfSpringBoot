@@ -187,3 +187,15 @@ Today, I made significant progress by diving into PostgreSQL and Microservices:
 - Learned about Rate Limiting and its importance
 - Implemented Rate Limiting with Resilience4J
 
+---
+## Day 11: Working with RabbitMQ
+
+**Topics Covered:**
+- Understanding Message Queues and their importance
+- Setting up RabbitMQ in the development environment
+- Integrating RabbitMQ with Spring Boot
+- Implemented publishing and consuming messages using RabbitMQ
+- Testing the RabbitMQ integration to ensure message delivery
+- Updated Company Ratings service to process messages from the queue
+
+
